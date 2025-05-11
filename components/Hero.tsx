@@ -24,6 +24,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="mb-6 md:mb-0">
+           
           <img
             className="rounded-full h-32 w-32 md:h-40 md:w-40 lg:h-44 lg:w-44 object-cover"
             src="140883227.jpg"

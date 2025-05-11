@@ -16,23 +16,7 @@ const imageUrls = [
     "/typescript.png",
     "/vercel.png",
   ];
-  
-  const languages = [
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "Java",
-    "Go",
-    "C++",
-    "Rust",
-    "C#",
-    "Ruby",
-    "Swift",
-    "HTML",
-    "CSS",
-    "SQL"
-  ];
-  
+
 export function IconCloudDemo() {
 
   return (
