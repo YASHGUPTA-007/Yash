@@ -39,7 +39,7 @@ export default function SignupFormDemo() {
           className="relative group/btn flex space-x-2 items-center justify-start px-4 py-2 rounded-md font-medium bg-zinc-900 text-neutral-300 shadow-lg hover:shadow-xl transition-all"
           type="button"
         >
-          <Link href="https://twitter.com/karaan_dev" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+          <Link href="https://x.com/yash_gupta_007_" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
             <IconBrandTwitter className="h-5 w-5" />
           <span>Twitter</span>
           </Link>
@@ -51,7 +51,7 @@ export default function SignupFormDemo() {
           type="button"
         >
           <Link
-            href="mailto:karankendreg@gmail.com" // Replace with your actual email
+            href="mailto:yash.gupta.11.7.2004@gmail.com" // Replace with your actual email
             className="flex space-x-2"
           >
             {/* You can replace the icon below with any email icon you want */}
@@ -67,7 +67,7 @@ export default function SignupFormDemo() {
           className="relative group/btn flex space-x-2 items-center justify-start px-4 py-2 rounded-md font-medium bg-zinc-900 text-neutral-300 shadow-lg hover:shadow-xl transition-all"
           type="button"
         >
-          <Link href="https://github.com/kendrekaran" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+          <Link href="https://github.com/YASHGUPTA-007" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
             <IconBrandGithub className="h-5 w-5" />
           <span>GitHub</span>
           </Link>
@@ -79,7 +79,7 @@ export default function SignupFormDemo() {
           className="relative group/btn flex space-x-2 items-center justify-start px-4 py-2 rounded-md font-medium bg-zinc-900 text-neutral-300 shadow-lg hover:shadow-xl transition-all"
           type="button"
         >
-          <Link href="https://linkedin.com/in/kendrekaran" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+          <Link href="https://www.linkedin.com/in/yash-gupta-code007" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
             <IconBrandLinkedin className="h-5 w-5" />
           <span>LinkedIn</span>
           </Link>
