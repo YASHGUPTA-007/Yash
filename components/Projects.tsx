@@ -40,9 +40,9 @@ export default function Projects() {
     mini: [
       {
         title: "Gwalior Darshan",
-        url: "https://gwaliordarshan.vercel.app/", // Replace with actual URL if different
-        imageUrl: "Gwalior-darshan-1.png", // Replace if you have your own
-        github: "https://github.com/kendrekaran/gwalior-darshan", // Replace with actual repo URL if different
+        url: "https://gwaliordarshan.vercel.app/", 
+        imageUrl: "Gwalior-darshan-1.png", 
+        github: "https://github.com/kendrekaran/gwalior-darshan", 
         techStack: [
           "React",
           "TypeScript",
