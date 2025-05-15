@@ -21,7 +21,7 @@ export function TypewriterEffectSmoothDemo() {
       <TypewriterEffectSmooth words={words} className="text-white" />
       <SparklesPreview/>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-      <InteractiveHoverButton href="https://drive.google.com/file/d/1Jg_KOfcXxwdJtnDofV5ENkdUF46V5WCS/view?usp=sharing">
+      <InteractiveHoverButton href="https://drive.google.com/file/d/1ocF1lNJ-EVqaZSFLw--YV4QhbrzY9I9B/view?usp=sharing">
   Download CV
 </InteractiveHoverButton>
 

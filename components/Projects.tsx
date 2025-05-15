@@ -31,7 +31,7 @@ export default function Projects() {
       {
         title: "Bhasha Hub",
         url: "https://bhasha-hub.vercel.app",
-        imageUrl: "Bhashahub.jpg", // Replace with your actual project image URL
+        imageUrl: "BhashaHub.jpg", // Replace with your actual project image URL
         github: "https://github.com/YASHGUPTA-007/Bhasha-hub.",
         techStack: ["Next.js", "React", "Tailwind CSS", "Clerk.js", "Convex", "Framer Motion"],
       }, 
@@ -54,16 +54,8 @@ export default function Projects() {
       },
      
     ],
-    landing: [
-      {
-        title: "Zen Ops",
-        url: "http://Zen-ops.vercel.app",
-        imageUrl: `https://i.pinimg.com/736x/b1/04/4e/b1044e584c8d71c3996162d5051d3832.jpg`,
-        github: "https://github.com/kendrekaran/Zenops",
-        techStack: ["Next.js", "React", "Tailwind CSS"],
-      },
-     
-    ],
+
+
   }
 
   const getTechIcon = (tech: string) => {
