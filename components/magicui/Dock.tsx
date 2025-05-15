@@ -18,7 +18,7 @@ export function FloatingDockDemo() {
     {
       title: "Home",
       icon: (
-        <IconHome className="h-full w-full text-white  dark:text-white " />
+        <IconHome className="bg-h-full w-full text-white  dark:text-white " />
       ),
       href: "#hero",
     },

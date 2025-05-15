@@ -42,7 +42,7 @@ export default function Projects() {
         title: "Gwalior Darshan",
         url: "https://gwaliordarshan.vercel.app/", 
         imageUrl: "Gwalior-darshan-1.png", 
-        github: "https://github.com/kendrekaran/gwalior-darshan", 
+        github: "https://github.com/YASHGUPTA-007/gwalior-darshan", 
         techStack: [
           "React",
           "TypeScript",
@@ -112,7 +112,7 @@ export default function Projects() {
         {/* Tabs */}
         <div className="flex justify-center rounded-xl mb-10">
           <div className="inline-flex p-1 bg-gray-900/50 rounded-xl">
-            {(["fullstack", "mini", "landing"] as const).map((tab) => (
+            {(["fullstack", "mini"] as const).map((tab) => (
               <button
                 key={tab}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -212,7 +212,7 @@ export default function Projects() {
         {/* View all projects button */}
         <div className="mt-14 text-center">
           <a
-            href="https://github.com/kendrekaran"
+            href="https://github.com/YASHGUPTA-007"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg shadow-blue-500/20 hover:shadow-blue-600/30 text-sm"
