@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import { IconCloudDemo } from "@/components/magic_ui";
 
 import BackgroundParticles from "@/components/BackgroundParticles";
+import ChatBot from "@/components/chatbot";
 
 export default function Home() {
   return (
@@ -18,12 +19,14 @@ export default function Home() {
       {/* Main content */}
       <main className="relative z-10  text-white flex flex-col">
         <Hero />
+        <ChatBot/>
         <IconCloudDemo />
         <Projects />
         <Skills />
         <div className="relative z-50">
           <FloatingDockDemo />
         </div>
+        
         <Contact />
       </main>
     </div>
