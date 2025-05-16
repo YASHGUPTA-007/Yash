@@ -27,15 +27,15 @@ export default function ChatBot() {
   const [showPredefined, setShowPredefined] = useState(true);
 
   const messagesContainerRef = useRef<HTMLDivElement>(null);
-  const apiKey = "AIzaSyCb8O6CQYR2uiRF7CEWJ4mkgxASrvBzb1Y";
-  const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  // Make sure the env var name matches your .env.local!
+  const apiKey = process.env.NEXT_PUBLIC_GENERATIVE_AI_GEMINI_API;
+  const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
+  const model = genAI?.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const scrollToBottom = () => {
-    const container = messagesContainerRef.current;
-    if (container) {
-      container.scrollTop = container.scrollHeight;
-    }
+    const c = messagesContainerRef.current;
+    if (c) c.scrollTop = c.scrollHeight;
   };
 
   useEffect(() => {
@@ -43,18 +43,32 @@ export default function ChatBot() {
   }, [messages]);
 
   const sendMessage = async (userQuery: string) => {
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      content: userQuery,
-      role: "user",
-      timestamp: new Date(),
-    };
+    // Guard if we don't have a model
+    if (!model) {
+      console.error("❌ Gemini model is not initialized—check your API key");
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now().toString(),
+          content:
+            "🤖 Oops! I’m not wired up to Gemini right now. Did you set NEXT_PUBLIC_GENERATIVE_AI_GEMINI_API?",
+          role: "assistant",
+          timestamp: new Date(),
+        },
+      ]);
+      return;
+    }
 
-    setMessages((prev) => [...prev, userMessage]);
+    // add the user’s question to chat
+    setMessages((prev) => [
+      ...prev,
+      { id: Date.now().toString(), content: userQuery, role: "user", timestamp: new Date() },
+    ]);
     setInput("");
     setIsLoading(true);
     setShowPredefined(false);
 
+    // wrap the prompt in backticks!
     const promptText = `You are YashGPT – a chatbot that mimics the personality of Yash Gupta, a witty and sarcastic developer. Your goal is to answer questions about Yash's life, skills, or projects in a SHORT and FUNNY way.
 
 Tone:
@@ -79,16 +93,17 @@ Now answer this like Yash would (in points, with swag):
       const result = await model.generateContent([promptText]);
       const response = await result.response;
 
-      const botMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        content: response.text(),
-        role: "assistant",
-        timestamp: new Date(),
-      };
-
-      setMessages((prev) => [...prev, botMessage]);
-    } catch (error) {
-      console.error("Gemini error:", error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: (Date.now() + 1).toString(),
+          content: response.text(),
+          role: "assistant",
+          timestamp: new Date(),
+        },
+      ]);
+    } catch (err) {
+      console.error("Gemini error:", err);
       setMessages((prev) => [
         ...prev,
         {
@@ -103,11 +118,9 @@ Now answer this like Yash would (in points, with swag):
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (input.trim()) {
-      await sendMessage(input.trim());
-    }
+    if (input.trim()) sendMessage(input.trim());
   };
 
   return (
@@ -117,7 +130,6 @@ Now answer this like Yash would (in points, with swag):
           <div className="p-6 rounded-lg">
             <h2 className="text-2xl font-serif mb-4 text-white">Ask YashGPT</h2>
 
-            {/* Predefined Questions */}
             {showPredefined && (
               <div className="flex flex-wrap gap-2 mb-4">
                 {predefinedQuestions.map((q) => (
@@ -132,7 +144,6 @@ Now answer this like Yash would (in points, with swag):
               </div>
             )}
 
-            {/* Messages */}
             <div
               ref={messagesContainerRef}
               className="h-80 overflow-y-auto border border-white/20 p-4 mb-4 rounded backdrop-blur-sm bg-white/5"
@@ -160,11 +171,7 @@ Now answer this like Yash would (in points, with swag):
               )}
             </div>
 
-            {/* Input Form */}
-            <form
-              onSubmit={handleSubmit}
-              className="flex items-center border-t border-white/20 pt-2"
-            >
+            <form onSubmit={handleSubmit} className="flex items-center border-t border-white/20 pt-2">
               <input
                 type="text"
                 className="flex-1 p-2 bg-transparent border border-white/20 text-white placeholder-gray-400 rounded-l focus:outline-none"
@@ -177,11 +184,7 @@ Now answer this like Yash would (in points, with swag):
                 disabled={isLoading || !input.trim()}
                 className="bg-white/10 text-white px-4 py-2 rounded-r hover:bg-white/20 transition flex items-center"
               >
-                {isLoading ? (
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                ) : (
-                  <Send className="h-5 w-5" />
-                )}
+                {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Send className="h-5 w-5" />}
               </button>
             </form>
           </div>
@@ -190,6 +193,7 @@ Now answer this like Yash would (in points, with swag):
     </div>
   );
 }
+
 
 // "use client";
 
