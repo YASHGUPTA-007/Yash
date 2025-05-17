@@ -23,6 +23,7 @@ export default function Home() {
         <IconCloudDemo />
         <Projects />
         <Skills />
+        <ChatBot/>
         <div className="relative z-50">
           <FloatingDockDemo />
         </div>
