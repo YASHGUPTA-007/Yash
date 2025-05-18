@@ -24,7 +24,7 @@ export default function Home() {
         <Projects />
         <Skills />
         
-        <div className="relative z-50">
+        <div className="relative z-56">
           <FloatingDockDemo />
         </div>
         
