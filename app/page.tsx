@@ -14,7 +14,10 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Background Particles behind everything */}
-      <BackgroundParticles />
+      <div className="hidden sm:block">
+      <BackgroundParticles  />
+      </div>
+      
 
       {/* Main content */}
       <main className="relative z-10  text-white flex flex-col">
