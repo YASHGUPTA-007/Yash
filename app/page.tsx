@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import Hero from "@/components/Hero";
-import '../app/globals.css';
+import "../app/globals.css";
 import Skills from "@/components/Tech_Stack";
 import { FloatingDockDemo } from "@/components/magicui/Dock";
 import Contact from "@/components/Contact";
@@ -19,15 +19,17 @@ export default function Home() {
       {/* Main content */}
       <main className="relative z-10  text-white flex flex-col">
         <Hero />
-        <ChatBot/>
-        <IconCloudDemo />
+        <ChatBot />
+        <div className="hidden sm:block">
+          <IconCloudDemo />
+        </div>
         <Projects />
         <Skills />
-        
+
         <div className="relative z-56">
           <FloatingDockDemo />
         </div>
-        
+
         <Contact />
       </main>
     </div>
