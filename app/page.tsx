@@ -23,7 +23,7 @@ export default function Home() {
       <main className="relative z-10  text-white flex flex-col">
         <Hero />
         <ChatBot />
-        <div className="hidden sm:block z-50">
+        <div className="hidden sm:block ">
           <IconCloudDemo />
         </div>
         <Projects />
