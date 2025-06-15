@@ -39,7 +39,7 @@ export default function Projects() {
     ],
     mini: [
       {
-        title: "Gwalior Darshan",
+        title: "Gwalior ",
         url: "https://gwaliordarshan.vercel.app/", 
         imageUrl: "Gwalior-darshan-1.png", 
         github: "https://github.com/YASHGUPTA-007/gwalior-darshan", 
