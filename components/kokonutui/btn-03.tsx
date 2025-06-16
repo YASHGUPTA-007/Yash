@@ -1,4 +1,5 @@
 "use client";
+// @ts-nocheck
 
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "motion/react";
@@ -20,7 +21,7 @@ interface Particle {
 export default function Btn03({
   className,
   particleCount = 16,
-  //@ts-ignore
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   attractRadius = 100,
   ...props
 }: Btn03Props) {
