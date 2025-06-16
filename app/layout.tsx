@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers";
+import LoaderWrapper from "./LoaderWrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,9 +33,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LoaderWrapper>
         <LenisProvider>
           {children}
         </LenisProvider>
+        </LoaderWrapper>
       </body>
     </html>
   );

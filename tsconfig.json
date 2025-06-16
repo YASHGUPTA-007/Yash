@@ -28,6 +28,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "components/magicui/TypeWriter.tsx"  ],
   "exclude": ["node_modules"]
 }
