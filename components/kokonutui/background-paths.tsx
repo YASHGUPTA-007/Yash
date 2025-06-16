@@ -55,6 +55,7 @@ export default function BackgroundPaths({
 }: {
     title?: string;
 }) {
+    //@ts-ignore
     const words = title.split(" ");
 
     return (

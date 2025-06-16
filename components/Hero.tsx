@@ -4,7 +4,6 @@ import { MeteorDemo } from './magicui/meteors';
 import { Spotlight } from './ui/spotlight';
 import { TypewriterEffectSmoothDemo } from './magicui/TypeWriter';
 import Button from './ui/Button1';
-import Btn03 from './kokonutui/btn-03';
 import BackgroundPaths from './kokonutui/background-paths';
 
 const Hero = () => {

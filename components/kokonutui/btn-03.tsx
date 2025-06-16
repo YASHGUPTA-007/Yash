@@ -20,6 +20,7 @@ interface Particle {
 export default function Btn03({
   className,
   particleCount = 16,
+  //@ts-ignore
   attractRadius = 100,
   ...props
 }: Btn03Props) {
