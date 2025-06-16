@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "motion/react";
 import { Magnet } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 
 interface Btn03Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   particleCount?: number;
