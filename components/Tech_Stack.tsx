@@ -36,11 +36,9 @@ const skills: Skill[] = [
   { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-800" },
 // unofficial, optional custom icon
   { name: "Clerk.js", icon: SiClerk, color: "text-pink-500" }, // unofficial, optional custom icon
-  { name: "Framer Motion", icon: SiFramer, color: "text-pink-400" },
   { name: "Material UI", icon: SiMui, color: "text-blue-500" },
   { name: "Lucide React", icon: SiLucide, color: "text-green-400" }, // unofficial, may need custom handling
   { name: "Lemon Squeezy", icon: SiLemonsqueezy, color: "text-yellow-300" }, // unofficial
-  { name: "Gemini API", icon: SiGoogle, color: "text-blue-500" },
   // use custom or fallback icon
 ];
 
