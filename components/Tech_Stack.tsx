@@ -41,7 +41,7 @@ const skills: Skill[] = [
   { name: "Lucide React", icon: SiLucide, color: "text-green-400" }, // unofficial, may need custom handling
   { name: "Lemon Squeezy", icon: SiLemonsqueezy, color: "text-yellow-300" }, // unofficial
   { name: "Gemini API", icon: SiGoogle, color: "text-blue-500" },
-  { name: "Piston API", icon: SiCodeforces, color: "text-gray-500" } // use custom or fallback icon
+  // use custom or fallback icon
 ];
 
 
