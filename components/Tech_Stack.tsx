@@ -5,7 +5,14 @@ import { motion } from "framer-motion";
 import { 
   SiHtml5, SiCss3, SiJavascript, SiTailwindcss, 
   SiTypescript, SiReact, SiNodedotjs, SiExpress,
-  SiMongodb, SiNextdotjs
+  SiMongodb, SiNextdotjs,
+  SiClerk,
+  SiFramer,
+  SiGoogle,
+  SiLemonsqueezy,
+  SiLucide,
+  SiMui,
+  SiPostgresql
 } from "react-icons/si";
 
 interface Skill {
@@ -15,18 +22,28 @@ interface Skill {
 }
 
 const Skills: React.FC = () => {
-  const skills: Skill[] = [
-    { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
-    { name: "CSS", icon: SiCss3, color: "text-blue-500" },
-    { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "text-cyan-400" },
-    { name: "React", icon: SiReact, color: "text-blue-400" },
-    { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
-    { name: "Express.js", icon: SiExpress, color: "text-gray-400" },
-    { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
-    { name: "Next.js", icon: SiNextdotjs, color: "text-white" }
-  ];
+const skills: Skill[] = [
+  { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
+  { name: "CSS", icon: SiCss3, color: "text-blue-500" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+  { name: "Tailwind", icon: SiTailwindcss, color: "text-cyan-400" },
+  { name: "React", icon: SiReact, color: "text-blue-400" },
+  { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+  { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+  { name: "Express.js", icon: SiExpress, color: "text-gray-400" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-800" },
+// unofficial, optional custom icon
+  { name: "Clerk.js", icon: SiClerk, color: "text-pink-500" }, // unofficial, optional custom icon
+  { name: "Framer Motion", icon: SiFramer, color: "text-pink-400" },
+  { name: "Material UI", icon: SiMui, color: "text-blue-500" },
+  { name: "Lucide React", icon: SiLucide, color: "text-green-400" }, // unofficial, may need custom handling
+  { name: "Lemon Squeezy", icon: SiLemonsqueezy, color: "text-yellow-300" }, // unofficial
+  { name: "Gemini API", icon: SiGoogle, color: "text-blue-500" },
+  { name: "Piston API", icon: SiCodeforces, color: "text-gray-500" } // use custom or fallback icon
+];
+
 
   const container = {
     hidden: { opacity: 0 },
