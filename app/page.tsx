@@ -22,11 +22,12 @@ export default function Home() {
       {/* Main content */}
       <main className="relative z-10  text-white flex flex-col">
         <Hero />
+        <Projects />
         <ChatBot />
         <div className="hidden sm:block ">
           <IconCloudDemo />
         </div>
-        <Projects />
+        
         <Skills />
 
         <div className="relative z-56">
