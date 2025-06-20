@@ -22,7 +22,7 @@ export function TypewriterEffectSmoothDemo() {
       <TypewriterEffectSmooth words={words} className="text-white" />
       
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-      <InteractiveHoverButton href="https://drive.google.com/file/d/1ocF1lNJ-EVqaZSFLw--YV4QhbrzY9I9B/view?usp=sharing">
+      <InteractiveHoverButton href="https://drive.google.com/file/d/1XItpUd80QLo88hxLQhp2ofK8T6lDek8f/view?usp=sharing">
   Download CV
 </InteractiveHoverButton>
 
