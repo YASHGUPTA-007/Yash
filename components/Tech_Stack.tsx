@@ -65,7 +65,7 @@ const Skills: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-10 md:mb-16 "
+          className="mb-10 md:mb-16 text-center"
         >
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 relative inline-block">
             Tech <span className="text-blue-500">Stack</span>
