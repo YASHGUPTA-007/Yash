@@ -28,7 +28,7 @@ export default function ChatBot() {
 
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
-  // Make sure the env var name matches your .env.local!
+  
   const apiKey = process.env.NEXT_PUBLIC_GENERATIVE_AI_GEMINI_API;
   const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
   const model = genAI?.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -43,7 +43,8 @@ export default function ChatBot() {
   }, [messages]);
 
   const sendMessage = async (userQuery: string) => {
-    // Guard if we don't have a model
+    // Guard IF CONNECTING ISSUE
+    
     if (!model) {
       console.error("❌ Gemini model is not initialized—check your API key");
       setMessages((prev) => [
@@ -51,7 +52,7 @@ export default function ChatBot() {
         {
           id: Date.now().toString(),
           content:
-            "🤖 Oops! I’m not wired up to Gemini right now. Did you set NEXT_PUBLIC_GENERATIVE_AI_GEMINI_API?",
+            " Oops! I’m not wired up to Gemini right now. Did you set NEXT_PUBLIC_GENERATIVE_AI_GEMINI_API?",
           role: "assistant",
           timestamp: new Date(),
         },

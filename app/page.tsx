@@ -9,15 +9,15 @@ import { IconCloudDemo } from "@/components/magic_ui";
 
 import BackgroundParticles from "@/components/BackgroundParticles";
 import ChatBot from "@/components/chatbot";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Background Particles behind everything */}
       <div className="hidden sm:block">
-      <BackgroundParticles  />
+        <BackgroundParticles />
       </div>
-      
 
       {/* Main content */}
       <main className="relative z-10  text-white flex flex-col">
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="hidden sm:block ">
           <IconCloudDemo />
         </div>
-        
+
         <Skills />
 
         <div className="relative z-56">
@@ -35,6 +35,10 @@ export default function Home() {
         </div>
 
         <Contact />
+        <main className="p-10">
+          <h1 className="text-2xl font-bold mb-4">Contact Me</h1>
+          <ContactForm />
+        </main>
       </main>
     </div>
   );
